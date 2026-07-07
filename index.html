@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viajemos.py | Tu próxima aventura empieza acá</title>
+<meta name="description" content="Agencia de viajes Viajemos.py — asesoramiento personalizado para tu próximo viaje, individual o en grupo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="#inicio" class="logo"><i class="fa-solid fa-plane-departure"></i> Viajemos<span>.py</span></a>
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn btn-primary nav-cta">Cotizar viaje</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="hero-eyebrow">Agencia de viajes en Paraguay</p>
+    <h1>Tu próxima aventura<br>empieza acá</h1>
+    <p class="hero-sub">Asesoramiento personalizado, viajes individuales y grupos B2B. Te acompañamos de principio a fin.</p>
+    <div class="hero-actions">
+      <a href="#nosotros" class="btn btn-primary">Conocenos <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="https://wa.me/595981000000?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Hablar con un asesor</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><i class="fa-solid fa-chevron-down"></i></div>
+</section>
+
+<section class="strip">
+  <div class="container strip-inner">
+    <div class="strip-item"><i class="fa-solid fa-headset"></i><span>Asesoramiento personalizado</span></div>
+    <div class="strip-item"><i class="fa-solid fa-tags"></i><span>Precios competitivos</span></div>
+    <div class="strip-item"><i class="fa-solid fa-users"></i><span>Grupos e instituciones</span></div>
+    <div class="strip-item"><i class="fa-solid fa-shield-heart"></i><span>Acompañamiento total</span></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="nosotros">
+  <div class="container about-grid">
+    <div class="about-media">
+      <div class="about-img" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=900&auto=format&fit=crop')"></div>
+      <div class="about-badge">
+        <strong>+10</strong>
+        <span>años acompañando viajeros</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="section-eyebrow">Sobre nosotros</p>
+      <h2 class="section-title">Viajamos con vos, no solo para vos</h2>
+      <p>En Viajemos.py creemos que cada viaje es único. Por eso acompañamos a cada cliente de forma personalizada, desde la primera consulta hasta el regreso a casa, ya sea un viaje individual, en familia o un grupo institucional.</p>
+      <ul class="about-list">
+        <li><i class="fa-solid fa-check"></i> Asesoramiento 100% personalizado por WhatsApp o presencial</li>
+        <li><i class="fa-solid fa-check"></i> Paquetes individuales y para grupos e instituciones (B2B)</li>
+        <li><i class="fa-solid fa-check"></i> Seguimiento durante todo el proceso de reserva</li>
+        <li><i class="fa-solid fa-check"></i> Opciones de pago flexibles</li>
+      </ul>
+      <div class="stats">
+        <div class="stat"><strong>1.200+</strong><span>Clientes felices</span></div>
+        <div class="stat"><strong>30+</strong><span>Destinos</span></div>
+        <div class="stat"><strong>4.9/5</strong><span>Satisfacción</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <p class="section-eyebrow">Contacto</p>
+      <h2 class="section-title">Planifiquemos tu viaje</h2>
+      <p class="section-sub" style="margin-bottom:28px;">Escribinos y un asesor te va a contactar a la brevedad, o contanos por acá qué destino tenés en mente.</p>
+
+      <a href="https://wa.me/595981000000?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noopener" class="whatsapp-block">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div>
+          <strong>Escribinos por WhatsApp</strong>
+          <span>+595 981 000 000</span>
+        </div>
+      </a>
+
+      <div class="contact-detail"><i class="fa-solid fa-envelope"></i> hola@viajemos.py</div>
+      <div class="contact-detail"><i class="fa-solid fa-location-dot"></i> Asunción, Paraguay</div>
+
+      <div class="social-row">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <label for="nombre">Nombre y apellido</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+      </div>
+      <div class="form-row two-col">
+        <div>
+          <label for="telefono">WhatsApp / Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required placeholder="0981 000 000">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com">
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="destino">Destino de interés</label>
+        <input type="text" id="destino" name="destino" placeholder="Ej: Río de Janeiro">
+      </div>
+      <div class="form-row">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos fechas tentativas, cantidad de pasajeros, etc."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Enviar consulta <i class="fa-solid fa-paper-plane"></i></button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#inicio" class="logo"><i class="fa-solid fa-plane-departure"></i> Viajemos<span>.py</span></a>
+    <p>&copy; <span id="year"></span> Viajemos.py — Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/595981000000?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escribinos por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
