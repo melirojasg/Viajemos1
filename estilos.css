@@ -1,0 +1,810 @@
+/* =========================================================
+   Viajemos.PY – estilos
+   Colores y tipografía tomados del logo de la agencia.
+   Para cambiar los colores de toda la página, edita las
+   variables de aquí abajo.
+   ========================================================= */
+
+:root {
+  --negro: #0e0b09;
+  --marfil: #faf6f0;
+  --arena: #c8a27c;          /* dorado del logo, para fondos oscuros */
+  --dorado-texto: #8a6a45;   /* dorado oscuro, legible sobre fondos claros */
+  --beige: #f1e8da;
+  --borde: #e5d9c9;
+  --texto: #1a1512;
+  --texto-suave: #5b524a;
+  --texto-sobre-negro: #d6cabb;
+  --linea-oscura: #5e4b39;
+  --margen: 96px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 24px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--texto);
+  background: var(--marfil);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--dorado-texto);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5b4229;
+}
+
+:focus-visible {
+  outline: 2px solid var(--arena);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1.22;
+}
+
+h2 {
+  font-size: clamp(28px, 3.2vw, 38px);
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ---------- Piezas reutilizables ---------- */
+
+.etiqueta {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dorado-texto);
+}
+
+.etiqueta--dorada {
+  color: var(--arena);
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 32px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.boton--dorado {
+  background: var(--arena);
+  color: var(--negro);
+}
+
+.boton--dorado:hover {
+  background: #d8b592;
+  color: var(--negro);
+}
+
+.boton--borde {
+  border-color: var(--arena);
+  color: var(--marfil);
+}
+
+.boton--borde:hover {
+  background: rgba(200, 162, 124, 0.15);
+  color: var(--marfil);
+}
+
+.boton--negro {
+  background: var(--negro);
+  color: var(--marfil);
+}
+
+.boton--negro:hover {
+  background: #2a211b;
+  color: var(--marfil);
+}
+
+.boton--borde-negro {
+  border-color: var(--negro);
+  color: var(--negro);
+  min-height: 48px;
+  padding: 0 28px;
+  align-self: flex-start;
+}
+
+.boton--borde-negro:hover {
+  background: var(--negro);
+  color: var(--marfil);
+}
+
+.boton--ancho {
+  width: 100%;
+  min-height: 56px;
+}
+
+/* Recuadro que marca dónde va una foto */
+.foto-vacia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  padding: 12px;
+  background: #e9ddce;
+  border: 1px dashed var(--arena);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #6b5a48;
+}
+
+.foto-vacia--oscura {
+  background: #1b1512;
+  color: var(--arena);
+}
+
+/* ---------- Encabezado ---------- */
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 88px;
+  padding: 0 var(--margen);
+  background: var(--negro);
+}
+
+.logo {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--arena);
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--marfil);
+}
+
+.logo:hover {
+  color: var(--marfil);
+}
+
+.logo--chico {
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu a:not(.boton) {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e8dccb;
+}
+
+.menu a:not(.boton):hover {
+  color: var(--arena);
+}
+
+.menu .boton {
+  min-height: 44px;
+  padding: 0 24px;
+}
+
+/* ---------- Portada ---------- */
+
+.portada {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 560px;
+  align-items: center;
+  gap: 72px;
+  min-height: 680px;
+  padding: 48px var(--margen);
+  background: var(--negro);
+}
+
+.portada__texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.portada h1 {
+  font-size: clamp(36px, 4.2vw, 54px);
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--marfil);
+}
+
+.portada__frase {
+  max-width: 520px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--texto-sobre-negro);
+}
+
+.portada__botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.portada__foto {
+  height: 520px;
+}
+
+.portada__foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Franja de confianza ---------- */
+
+.confianza {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 48px;
+  min-height: 128px;
+  padding: 24px var(--margen);
+  border-bottom: 1px solid var(--borde);
+}
+
+.confianza__item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--dorado-texto);
+}
+
+.confianza__item svg {
+  flex-shrink: 0;
+}
+
+.confianza__item strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.confianza__item span {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+/* ---------- Servicios ---------- */
+
+.servicios {
+  display: flex;
+  align-items: center;
+  gap: 96px;
+  padding: 80px var(--margen);
+  background: var(--negro);
+}
+
+.servicios__intro {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.servicios__intro h2 {
+  color: var(--marfil);
+}
+
+.servicios__intro p:last-child {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--texto-sobre-negro);
+}
+
+.servicios__lista {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 168px;
+  padding: 28px;
+  border: 1px solid var(--linea-oscura);
+  color: var(--arena);
+}
+
+.servicio h3 {
+  color: var(--marfil);
+}
+
+.servicio p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--texto-sobre-negro);
+}
+
+/* ---------- Cómo funciona + formulario ---------- */
+
+.proceso {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 560px;
+  align-items: start;
+  gap: 96px;
+  padding: 88px var(--margen);
+}
+
+.proceso__pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pasos li {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.pasos__numero {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--dorado-texto);
+  border-radius: 50%;
+  font-size: 17px;
+  color: var(--dorado-texto);
+}
+
+.pasos h3 {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.pasos p {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--texto-suave);
+}
+
+.pasos .pasos__destacado {
+  display: inline-block;
+  margin: 10px 0 6px;
+  padding: 6px 14px;
+  border-left: 3px solid var(--arena);
+  background: var(--beige);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--negro);
+}
+
+.pasos .pasos__cursiva {
+  font-style: italic;
+}
+
+.pasos .pasos__amigable {
+  font-weight: 600;
+  color: var(--dorado-texto);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 44px;
+  background: #ffffff;
+  border: 1px solid var(--borde);
+}
+
+.formulario h3 {
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.campo-doble {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.campo label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.campo input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #c9b9a4;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--texto);
+}
+
+.campo input:focus-visible {
+  outline: 2px solid var(--negro);
+  outline-offset: 1px;
+}
+
+/* ---------- Info viajera ---------- */
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 72px var(--margen);
+  background: var(--beige);
+}
+
+.info .etiqueta {
+  color: #7a5c3a;
+}
+
+.info__lista {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 26px;
+}
+
+.info__tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 200px;
+  padding: 32px;
+  background: #ffffff;
+  color: var(--dorado-texto);
+}
+
+.info__tarjeta h3 {
+  font-size: 17px;
+  color: var(--texto);
+}
+
+.info__tarjeta p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--texto-suave);
+}
+
+/* ---------- Instagram ---------- */
+
+.instagram {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 80px var(--margen);
+}
+
+.instagram__texto {
+  flex: 0 0 336px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.instagram__texto h2 {
+  font-size: 36px;
+  letter-spacing: 0.06em;
+}
+
+.instagram__texto p:not(.etiqueta) {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--texto-suave);
+}
+
+.instagram__feed {
+  flex: 1;
+  min-width: 0;
+}
+
+.feed-vacio {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.feed-vacio .foto-vacia {
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+/* ---------- Pie ---------- */
+
+.pie {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 72px var(--margen) 40px;
+  background: var(--negro);
+  color: var(--marfil);
+}
+
+.pie__columnas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 64px;
+}
+
+.pie__columnas > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.pie p,
+.pie a {
+  font-size: 14px;
+  color: var(--marfil);
+}
+
+.pie a:hover {
+  color: var(--arena);
+}
+
+.pie .logo {
+  font-size: 20px;
+}
+
+.pie .etiqueta {
+  font-size: 12px;
+  color: var(--arena);
+}
+
+.pie__lema {
+  line-height: 1.6;
+  color: var(--texto-sobre-negro);
+}
+
+.pie .resaltado {
+  background: rgba(200, 162, 124, 0.18);
+  color: var(--arena);
+  font-weight: 500;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.pie__titulo {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--arena);
+}
+
+.pie p.pie__legal {
+  padding-top: 20px;
+  border-top: 1px solid #3a2f26;
+  font-size: 12px;
+  color: #b9ab9a;
+}
+
+/* =========================================================
+   Pantallas medianas (laptops chicas y tablets)
+   ========================================================= */
+@media (max-width: 1100px) {
+  :root {
+    --margen: 48px;
+  }
+
+  .portada {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    min-height: 0;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .portada__foto {
+    height: 360px;
+  }
+
+  .servicios {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .servicios__intro {
+    flex: none;
+    max-width: 560px;
+  }
+
+  .servicios__lista {
+    width: 100%;
+  }
+
+  .proceso {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .info__lista {
+    grid-template-columns: 1fr;
+  }
+
+  .info__tarjeta {
+    min-height: 0;
+  }
+
+  .instagram {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .instagram__texto {
+    flex: none;
+  }
+
+  .pie__columnas {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* =========================================================
+   Celulares
+   ========================================================= */
+@media (max-width: 720px) {
+  :root {
+    --margen: 20px;
+  }
+
+  .menu a:not(.boton) {
+    display: none;
+  }
+
+  .encabezado {
+    min-height: 72px;
+  }
+
+  .logo {
+    font-size: 18px;
+    padding: 8px 14px;
+  }
+
+  .menu .boton {
+    padding: 0 14px;
+    font-size: 11px;
+  }
+
+  .portada__foto {
+    height: 280px;
+  }
+
+  .portada__botones .boton {
+    flex: 1 1 100%;
+  }
+
+  .confianza {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .servicios,
+  .proceso,
+  .info,
+  .instagram {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .servicios__lista {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario {
+    padding: 28px 20px;
+  }
+
+  .campo-doble {
+    grid-template-columns: 1fr;
+  }
+
+  .feed-vacio {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.pasos h4 {
+  margin: 20px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--dorado-texto);
+}
+
+.pasos h4 + p {
+  margin-top: 4px;
+}
+/* Texto bajo el título: compensa la altura mínima del h3 para que quede pegado */
+.pasos h3 + p,
+.pasos h3 + h4 {
+  margin-top: -8px;
+}

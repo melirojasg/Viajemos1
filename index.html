@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viajemos.PY | Diseñamos sueños, diseñamos viajes</title>
+  <meta name="description" content="Viajemos.PY, agencia de viajes con registro SENATUR N° 683. Diseñamos sueños, diseñamos viajes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="encabezado">
+    <a class="logo" href="#inicio">Viajemos.Py</a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#cotizar">Cómo funciona</a>
+      <a href="#info">Info viajera</a>
+      <a class="boton boton--dorado js-whatsapp" href="#cotizar">Cotizar por WhatsApp</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ PORTADA ============ -->
+    <section class="portada" id="inicio">
+      <div class="portada__texto">
+        <p class="etiqueta etiqueta--dorada">Registro SENATUR N° 683</p>
+        <h1>Diseñamos sueños<br>Diseñamos viajes</h1>
+        <!-- CAMBIAR: frase corta sobre qué tipo de viajes hace la agencia y para quién -->
+        <p class="portada__frase">Creamos experiencias inolvidables alrededor del mundo, diseñadas exclusivamente para pasajeros exigentes que buscan descubrir el planeta sin preocupaciones.</p>
+        <div class="portada__botones">
+          <a class="boton boton--dorado" href="#cotizar">Pedir mi cotización</a>
+          <a class="boton boton--borde" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+
+      <!-- CAMBIAR: para poner tu foto, borra el div "foto-vacia" y descomenta la etiqueta img.
+           Guarda la foto en una carpeta "imagenes" dentro de agencia-viajes. -->
+      <div class="portada__foto">
+      
+        <img src="imagenes/portada.jpeg" alt="Descripción de la foto">
+      </div>
+    </section>
+
+    <!-- ============ FRANJA DE CONFIANZA ============ -->
+    <section class="confianza" aria-label="Por qué confiar en Viajemos.PY">
+      <div class="confianza__item">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <div>
+          <strong>Agencia habilitada</strong>
+          <span>Registro SENATUR N° 683</span>
+        </div>
+      </div>
+      <div class="confianza__item">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div>
+          <strong>11.4K seguidores</strong>
+          <span>Comunidad en @viajemos.py</span>
+        </div>
+      </div>
+      <div class="confianza__item">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <div>
+          <!-- CAMBIAR: un dato propio de la agencia -->
+          <strong>Buscamos cumplir tu sueño</strong>
+          <span>Más de 8 años haciendo realidad los sueños de más de 5.000 viajeros paraguayos en los 5 continentes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="servicios" id="servicios">
+      <div class="servicios__intro">
+        <p class="etiqueta etiqueta--dorada">Servicios</p>
+        <h2>Cada viaje, diseñado a tu medida</h2>
+        <!-- CAMBIAR: 1 o 2 líneas sobre cómo trabaja la agencia -->
+        <p>Te contamos un poco sobre nuestro trabajo</p>
+      </div>
+
+      <div class="servicios__lista">
+        <article class="servicio">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <h3>Salidas grupales</h3>
+          <p>Viajes acompañados desde Asunción con todo incluido para disfrutar en comunidad.</p>
+        </article>
+        <article class="servicio">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <h3>Viajes a medida</h3>
+          <p>Diseñamos el itinerario de tus sueños adaptado 100% a tus gustos, tiempos y presupuesto.</p>
+        </article>
+        <article class="servicio">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.2.4c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          <h3>Vuelos, hoteles y traslados</h3>
+          <p>Coordinamos toda tu logística con tarifas competitivas y las mejores conexiones.</p>
+        </article>
+        <article class="servicio">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Documentos y seguros</h3>
+          <p>Te asesoramos con tus visados y te equipamos con la mayor cobertura médica internacional.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA + FORMULARIO ============ -->
+    <section class="proceso" id="cotizar">
+      <div class="proceso__pasos">
+        <p class="etiqueta">Cómo funciona</p>
+        <h2>Del sueño al pasaje en 3 pasos</h2>
+
+        <ol class="pasos">
+          <li>
+            <span class="pasos__numero">1</span>
+            <div>
+              <h3>Cuéntanos tu sueño y te diseñamos un itinerario personalizado</h3>
+              <p class="pasos__destacado">No somos una agencia tradicional</p>
+                <p class="pasos__cursiva">Sabemos que tu tiempo es limitado y que el tráfico de la ciudad no ayuda.</p>
+                <p>Por eso trabajamos con <strong class="pasos__amigable">horarios flexibles 📅✈️</strong>: te atendemos en nuestra oficina con cita previa, el día y la hora que mejor te queden, de lunes a domingo.</p>
+            </div>
+          </li>
+          <li>
+            <span class="pasos__numero">2</span>
+            <div>
+              <h3>Reservas y pagas</h3>
+
+              <h4>Medios de pago</h4>
+              <p>Aceptamos efectivo, transferencia o depósito bancario, tarjetas de crédito y débito, y pagos con QR.</p>
+
+              <h4>Seña y cuotas</h4>
+              <p>Cada viaje es único, por eso las condiciones de seña y de pago en cuotas dependen del tipo de paquete.</p>
+
+              <h4>Promociones con tarjeta</h4>
+              <p>También contamos con promociones de pago en cuotas sin intereses con tarjetas de crédito de bancos locales, sujetas a las condiciones de cada entidad bancaria.</p>
+            </div>
+          </li>
+          <li>
+            <span class="pasos__numero">3</span>
+            <div>
+              <h3>Viajas tranquilo</h3>
+              <p>Documentos y acompañamiento listos antes de salir.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <form class="formulario" id="formulario-cotizacion">
+        <h3>Pide tu cotización</h3>
+
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+        </div>
+        <div class="campo">
+          <label for="whatsapp">WhatsApp</label>
+          <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="campo">
+          <label for="destino">Destino de interés</label>
+          <input id="destino" name="destino" type="text" required>
+        </div>
+        <div class="campo-doble">
+          <div class="campo">
+            <label for="fecha">Fecha aproximada</label>
+            <input id="fecha" name="fecha" type="text">
+          </div>
+          <div class="campo">
+            <label for="personas">Personas</label>
+            <input id="personas" name="personas" type="text">
+          </div>
+        </div>
+
+        <button class="boton boton--negro boton--ancho" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </section>
+
+    <!-- ============ INFO VIAJERA ============ -->
+    <section class="info" id="info">
+      <p class="etiqueta">Info viajera</p>
+      <h2>Antes de viajar, lo que necesitas saber</h2>
+
+      <div class="info__lista">
+        <article class="info__tarjeta">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/></svg>
+          <h3>Documentos y visas</h3>
+          <p>Siempre verificá la validez de tu pasaporte y los requisitos de visado vigentes para cada país</p>
+        </article>
+        <article class="info__tarjeta">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Seguro de viaje</h3>
+          <p>Viajá protegido ante imprevistos médicos o pérdidas de equipaje en cualquier destino</p>
+        </article>
+        <article class="info__tarjeta">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <h3>Consejos por destino</h3>
+          <p>Te damos recomendaciones locales sobre clima, moneda, enchufes y vestimenta antes de tu partida</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ INSTAGRAM ============ -->
+    <section class="instagram" id="instagram">
+      <div class="instagram__texto">
+        <p class="etiqueta">Instagram</p>
+        <h2>@viajemos.py</h2>
+        <p>Salidas, destinos y tips de viaje, día a día.</p>
+        <a class="boton boton--borde-negro" href="https://www.instagram.com/viajemos.py/" target="_blank" rel="noopener">Seguir en Instagram</a>
+      </div>
+
+      <div class="instagram__feed">
+        <behold-widget feed-id="pC0pmDGvkjIpEe8BRWj3"></behold-widget>
+            <script>
+              (() => {
+                if(window.__bhldScript)return;window.__bhldScript=true;
+                const d=document,s=d.createElement("script");s.type="module";
+                s.src="https://w.behold.so/widget.js";setTimeout(()=>{d.head.append(s);},0);
+              })();
+            </script>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ CONTACTO / PIE ============ -->
+  <footer class="pie" id="contacto">
+    <div class="pie__columnas">
+      <div>
+        <p class="logo logo--chico">Viajemos.Py</p>
+        <p class="pie__lema">Diseñamos sueños, diseñamos viajes.</p>
+        <p class="etiqueta etiqueta--dorada">Registro SENATUR N° 683</p>
+      </div>
+
+      <div>
+        <p class="pie__titulo">Contacto</p>
+        <!-- CAMBIAR: datos reales de contacto -->
+        <p>WhatsApp: <mark class="resaltado">+595 981 186 725</mark></p>
+        <p>Correo: <mark class="resaltado">viajemos.info@gmail.com</mark> / <mark class="resaltado">pamela@viajemospy.com</mark></p>
+        <p>📍 Edificio Molas López: Avda Molas López 1778, entre San Pedro y Martin Goicochea- PB local 3</p>
+        <p>Asunción, Paraguay.</p>
+        
+      </div>
+
+      <div>
+        <p class="pie__titulo">Síguenos</p>
+        <p><a href="https://www.instagram.com/viajemos.py/" target="_blank" rel="noopener">Instagram · @viajemos.py</a></p>
+        <p><a href="https://msha.ke/viajemospy" target="_blank" rel="noopener">Todos los enlaces · msha.ke/viajemospy</a></p>
+      </div>
+    </div>
+
+    <p class="pie__legal">© 2026 Viajemos.Py · Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    /* CAMBIAR: número de WhatsApp de la agencia.
+       Formato: código de país + número, sin +, espacios ni guiones.
+       Ejemplo de Paraguay: 595981123456 */
+    var NUMERO_WHATSAPP = "595981186725";
+
+    var esNumeroValido = /^[0-9]{8,15}$/.test(NUMERO_WHATSAPP);
+
+    /* Botones "Cotizar por WhatsApp": abren el chat con un mensaje inicial */
+    document.querySelectorAll(".js-whatsapp").forEach(function (enlace) {
+      if (!esNumeroValido) return; /* mientras no pongas el número, el botón lleva al formulario */
+      var mensaje = "Hola Viajemos.PY, quiero cotizar un viaje.";
+      enlace.href = "https://wa.me/" + NUMERO_WHATSAPP + "?text=" + encodeURIComponent(mensaje);
+      enlace.target = "_blank";
+      enlace.rel = "noopener";
+    });
+
+    /* Formulario: arma el mensaje y abre WhatsApp */
+    document.getElementById("formulario-cotizacion").addEventListener("submit", function (evento) {
+      evento.preventDefault();
+
+      if (!esNumeroValido) {
+        alert("Falta configurar el número de WhatsApp de la agencia en index.html (NUMERO_WHATSAPP).");
+        return;
+      }
+
+      var datos = new FormData(evento.target);
+      var lineas = [
+        "Hola Viajemos.PY, quiero pedir una cotización.",
+        "Nombre: " + datos.get("nombre"),
+        "WhatsApp: " + datos.get("whatsapp"),
+        "Destino de interés: " + datos.get("destino"),
+        "Fecha aproximada: " + (datos.get("fecha") || "sin definir"),
+        "Personas: " + (datos.get("personas") || "sin definir")
+      ];
+
+      var url = "https://wa.me/" + NUMERO_WHATSAPP + "?text=" + encodeURIComponent(lineas.join("\n"));
+      window.open(url, "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>
